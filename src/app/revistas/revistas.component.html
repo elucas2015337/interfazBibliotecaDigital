@@ -1,0 +1,544 @@
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+<div class = "barraDeIconos">
+    <a href="/users"><i class="fa fa-group"></i></a>
+    <a href="/libros"><i class="fa fa-book"></i></a>
+    <a class="active" href="/revistas"><i class="fa fa-newspaper-o"></i></a>
+  </div>
+
+
+  <div class="container mb-3 mt-3">
+    <table id="example3" class="table table-bordered table-striped" style="width:100%">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Título</th>
+          <th>Edición</th>
+          <th>Frecuencia</th>
+          <th>Temas</th>
+          <th>Disponibles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="customtr" data-toggle="modal" data-target="#maganize1">
+          <td>1</td>
+          <td>Revista Científica UVG</td>
+          <td>39</td>
+          <td>Mensual</td>
+          <td>Educación, Pedagogía, Idioma</td>
+          <td>20</td>
+          
+        </tr>
+        <tr id="customtr" data-toggle="modal" data-target="#maganize2">
+          <td>2</td>
+          <td>Revista Científica UVG</td>
+          <td>38</td>
+          <td>Mensual</td>
+          <td>Educación, Pedagogía, Idioma</td>
+          <td>24</td>
+        </tr>
+        <tr id="customtr" data-toggle="modal" data-target="#maganize3">
+          <td>3</td>
+          <td>ALTUM UNIS</td>
+          <td>13</td>
+          <td>Anual</td>
+          <td>Ciencia, Diseño, Tecnología</td>
+          <td>200</td>
+        </tr>
+        <tr id="customtr" data-toggle="modal" data-target="#maganize4">
+          <td>4</td>
+          <td>ALTUM UNIS</td>
+          <td>12</td>
+          <td>Anual</td>
+          <td>Ciencia, Diseño, Tecnología</td>
+          <td>100</td>
+        </tr>
+        <tr id="customtr" data-toggle="modal" data-target="#maganize5">
+          <td>5</td>
+          <td>Ciencia, tecnología y salud</td>
+          <td>7</td>
+          <td>Bimestral</td>
+          <td>Ciencia,, tecnología, salud</td>
+          <td>2</td>
+        </tr>
+        
+      </tbody>
+     
+    </table>
+  </div>
+
+  <div class="modal fade" id="deleteConfirm" tabindex="-1" aria-labelledby="exampleModalSmLabel" aria-hidden="true" >
+    <div class="modal-dialog modal-sm" id= "modalDialog">
+      <div class="modal-content" id = "deleteConfirmColor">
+        <div class="modal-header">
+          <h5 class="modal-title h4" id="exampleModalSmLabel">¿Eliminar la revista?</h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Confirmar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade"  id="addNewMaganize" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Agregar Revista</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputUser" class="sr-only">autor</label>
+              <input type="name" class="form-control" placeholder="Autor" required autofocus>
+            </div>
+            <div class="form-group">
+              <label for="inputLastName" class="sr-only">tittle</label>
+              <input type="tittle" class="form-control" placeholder="Título" required>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="sr-only">edition</label>
+              <input type="edition" class="form-control" placeholder="Edición" required>
+            </div>
+            <div class="form-group">
+              <label for="inputID" class="sr-only">keywords</label>
+              <input type="keywords" class="form-control" placeholder="Palabras Clave" required>
+            </div>
+            <div class="form-group">
+              <label for="themes" class="sr-only">temes</label>
+              <input type="themes" class="form-control" placeholder="Temas" required>
+            </div>
+            <div class="form-group">
+              <label for="copies" class="sr-only">copies</label>
+              <input type="copies" class="form-control" placeholder="No. Copias" required>
+            </div>
+            <div class="form-group">
+              <label for="available" class="sr-only">available</label>
+              <input type="available" class="form-control" placeholder="Disponibles" required>
+            </div>
+            <div class="form-group">
+              <label for="frecuence" class="sr-only">frecuence</label>
+              <input type="frecuence" class="form-control" placeholder="Frecuencia" required>
+            </div>
+            <div class="form-group">
+              <label for="speciments" class="sr-only">speciments</label>
+              <input type="speciments" class="form-control" placeholder="Ejemplares" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Descripción:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+            
+           
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Agregar</button>
+            </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- ------------------------------------------------------------------------------------------------------------------- -->
+
+  <div class="modal fade"  id="maganize1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Revista Científica UVG</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputUser" class="sr-only">autor</label>
+              <input type="name" class="form-control" placeholder="Autor" value="autor1" required autofocus>
+            </div>
+            <div class="form-group">
+              <label for="inputLastName" class="sr-only">tittle</label>
+              <input type="tittle" class="form-control" placeholder="Título" value="Revista Científica UVG"  required>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="sr-only">edition</label>
+              <input type="edition" class="form-control" placeholder="Edición" value="39" required>
+            </div>
+            <div class="form-group">
+              <label for="inputID" class="sr-only">keywords</label>
+              <input type="keywords" class="form-control" placeholder="Palabras Clave" value="UVG, científica, investigación" required>
+            </div>
+            <div class="form-group">
+              <label for="themes" class="sr-only">temes</label>
+              <input type="themes" class="form-control" placeholder="Temas" value="Educación, Pedagogía, Idioma" required>
+            </div>
+            <div class="form-group">
+              <label for="copies" class="sr-only">copies</label>
+              <input type="copies" class="form-control" placeholder="No. Copias" value="44555" required>
+            </div>
+            <div class="form-group">
+              <label for="available" class="sr-only">available</label>
+              <input type="available" class="form-control" placeholder="Disponibles" value="20" required>
+            </div>
+            <div class="form-group">
+              <label for="frecuence" class="sr-only">frecuence</label>
+              <input type="frecuence" class="form-control" placeholder="Frecuencia" value="Mensual" required>
+            </div>
+            <div class="form-group">
+              <label for="speciments" class="sr-only">speciments</label>
+              <input type="speciments" class="form-control" placeholder="Ejemplares" value="8888" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Descripción:</label>
+              <textarea class="form-control" id="message-text">Revista científica de la Universidad del Valle de Guatemala que incluye distintas e importantes investigaciones respecto a distintos temas</textarea>
+            </div>
+            
+           
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade"  id="maganize2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Revista Científica UVG</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputUser" class="sr-only">autor</label>
+              <input type="name" class="form-control" placeholder="Autor" value="autor1" required autofocus>
+            </div>
+            <div class="form-group">
+              <label for="inputLastName" class="sr-only">tittle</label>
+              <input type="tittle" class="form-control" placeholder="Título" value="Revista Científica UVG"  required>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="sr-only">edition</label>
+              <input type="edition" class="form-control" placeholder="Edición" value="38" required>
+            </div>
+            <div class="form-group">
+              <label for="inputID" class="sr-only">keywords</label>
+              <input type="keywords" class="form-control" placeholder="Palabras Clave" value="UVG, científica, investigación" required>
+            </div>
+            <div class="form-group">
+              <label for="themes" class="sr-only">temes</label>
+              <input type="themes" class="form-control" placeholder="Temas" value="Educación, Pedagogía, Idioma" required>
+            </div>
+            <div class="form-group">
+              <label for="copies" class="sr-only">copies</label>
+              <input type="copies" class="form-control" placeholder="No. Copias" value="4425" required>
+            </div>
+            <div class="form-group">
+              <label for="available" class="sr-only">available</label>
+              <input type="available" class="form-control" placeholder="Disponibles" value="24" required>
+            </div>
+            <div class="form-group">
+              <label for="frecuence" class="sr-only">frecuence</label>
+              <input type="frecuence" class="form-control" placeholder="Frecuencia" value="Mensual" required>
+            </div>
+            <div class="form-group">
+              <label for="speciments" class="sr-only">speciments</label>
+              <input type="speciments" class="form-control" placeholder="Ejemplares" value="788" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Descripción:</label>
+              <textarea class="form-control" id="message-text">Revista científica de la Universidad del Valle de Guatemala que incluye distintas e importantes investigaciones respecto a distintos temas</textarea>
+            </div>
+            
+           
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade"  id="maganize3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">ALTUM UNIS</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputUser" class="sr-only">autor</label>
+              <input type="name" class="form-control" placeholder="Autor" value="autor2" required autofocus>
+            </div>
+            <div class="form-group">
+              <label for="inputLastName" class="sr-only">tittle</label>
+              <input type="tittle" class="form-control" placeholder="Título" value="ALTUM UNIS"  required>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="sr-only">edition</label>
+              <input type="edition" class="form-control" placeholder="Edición" value="13" required>
+            </div>
+            <div class="form-group">
+              <label for="inputID" class="sr-only">keywords</label>
+              <input type="keywords" class="form-control" placeholder="Palabras Clave" value="UNIS, ALTUM, Ciencia, investigación" required>
+            </div>
+            <div class="form-group">
+              <label for="themes" class="sr-only">temes</label>
+              <input type="themes" class="form-control" placeholder="Temas" value="Ciencia, Diseño, Tecnología" required>
+            </div>
+            <div class="form-group">
+              <label for="copies" class="sr-only">copies</label>
+              <input type="copies" class="form-control" placeholder="No. Copias" value="555" required>
+            </div>
+            <div class="form-group">
+              <label for="available" class="sr-only">available</label>
+              <input type="available" class="form-control" placeholder="Disponibles" value="200" required>
+            </div>
+            <div class="form-group">
+              <label for="frecuence" class="sr-only">frecuence</label>
+              <input type="frecuence" class="form-control" placeholder="Frecuencia" value="Anual" required>
+            </div>
+            <div class="form-group">
+              <label for="speciments" class="sr-only">speciments</label>
+              <input type="speciments" class="form-control" placeholder="Ejemplares" value="821" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Descripción:</label>
+              <textarea class="form-control" id="message-text">Revista de investigación tecnológica de la Universidad del Itsmo</textarea>
+            </div>
+            
+           
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade"  id="maganize4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">ALTUM UNIS</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputUser" class="sr-only">autor</label>
+              <input type="name" class="form-control" placeholder="Autor" value="autor2" required autofocus>
+            </div>
+            <div class="form-group">
+              <label for="inputLastName" class="sr-only">tittle</label>
+              <input type="tittle" class="form-control" placeholder="Título" value="ALTUM UNIS"  required>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="sr-only">edition</label>
+              <input type="edition" class="form-control" placeholder="Edición" value="12" required>
+            </div>
+            <div class="form-group">
+              <label for="inputID" class="sr-only">keywords</label>
+              <input type="keywords" class="form-control" placeholder="Palabras Clave" value="UNIS, ALTUM, Ciencia, investigación" required>
+            </div>
+            <div class="form-group">
+              <label for="themes" class="sr-only">temes</label>
+              <input type="themes" class="form-control" placeholder="Temas" value="Ciencia, Diseño, Tecnología" required>
+            </div>
+            <div class="form-group">
+              <label for="copies" class="sr-only">copies</label>
+              <input type="copies" class="form-control" placeholder="No. Copias" value="575" required>
+            </div>
+            <div class="form-group">
+              <label for="available" class="sr-only">available</label>
+              <input type="available" class="form-control" placeholder="Disponibles" value="100" required>
+            </div>
+            <div class="form-group">
+              <label for="frecuence" class="sr-only">frecuence</label>
+              <input type="frecuence" class="form-control" placeholder="Frecuencia" value="Anual" required>
+            </div>
+            <div class="form-group">
+              <label for="speciments" class="sr-only">speciments</label>
+              <input type="speciments" class="form-control" placeholder="Ejemplares" value="4625" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Descripción:</label>
+              <textarea class="form-control" id="message-text">Revista de investigación tecnológica de la Universidad del Itsmo</textarea>
+            </div>
+            
+           
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade"  id="maganize5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ciencia, Tecnología y Salud</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputUser" class="sr-only">autor</label>
+              <input type="name" class="form-control" placeholder="Autor" value="autor3" required autofocus>
+            </div>
+            <div class="form-group">
+              <label for="inputLastName" class="sr-only">tittle</label>
+              <input type="tittle" class="form-control" placeholder="Título" value="Ciencia, tecnología y salud"  required>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="sr-only">edition</label>
+              <input type="edition" class="form-control" placeholder="Edición" value="7" required>
+            </div>
+            <div class="form-group">
+              <label for="inputID" class="sr-only">keywords</label>
+              <input type="keywords" class="form-control" placeholder="Palabras Clave" value="Rafael Landivar, Universidad, revista de salud" required>
+            </div>
+            <div class="form-group">
+              <label for="themes" class="sr-only">temes</label>
+              <input type="themes" class="form-control" placeholder="Temas" value="Ciencia, tecnología, salud" required>
+            </div>
+            <div class="form-group">
+              <label for="copies" class="sr-only">copies</label>
+              <input type="copies" class="form-control" placeholder="No. Copias" value="985" required>
+            </div>
+            <div class="form-group">
+              <label for="available" class="sr-only">available</label>
+              <input type="available" class="form-control" placeholder="Disponibles" value="3" required>
+            </div>
+            <div class="form-group">
+              <label for="frecuence" class="sr-only">frecuence</label>
+              <input type="frecuence" class="form-control" placeholder="Frecuencia" value="Bimestral" required>
+            </div>
+            <div class="form-group">
+              <label for="speciments" class="sr-only">speciments</label>
+              <input type="speciments" class="form-control" placeholder="Ejemplares" value="222" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Descripción:</label>
+              <textarea class="form-control" id="message-text">Revista de cuidado y tecnología publicada Bimestralmente por la universidad Rafael Landivar</textarea>
+            </div>
+            
+           
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" id="report" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+  
+        <div class="modal-header">
+          <h4 class="modal-title" id="myLargeModalLabel">Top revistas más prestadas</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Autor</th>
+                <th scope="col">Título</th>
+                <th scope="col">Cantidad Prestada</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>autor2</td>
+                <td>ALTUM UNIS</td>
+                <td>14</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>autor3</td>
+                <td>Ciencia, tecnología y salud</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>autor2</td>
+                <td>ALTUM UNIS</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>autor1</td>
+                <td>Revista Científica UVG</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>autor1</td>
+                <td>Revista Científica UVG</td>
+                <td>6</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+           
+  <button id="plusButton" class="btn"  data-toggle="modal" data-target="#addNewMaganize"><i class="fa fa-plus-square"></i></button>
+  <button id="reportButton" class="btn"  data-toggle="modal" data-target="#report"><i class="fa fa-list"></i></button>

@@ -1,0 +1,36 @@
+#about {
+    color: white;
+    list-style-type: none;
+    overflow: auto;
+  }
+  
+ 
+
+  .footer {
+    padding: 0px;
+    background: indigo;
+  }
+  
+  
+
+  .btn{
+      font-weight: 600;
+      border: 2px solid;
+  }
+
+  .btn-outline.light{
+      color: purple;
+  }
+
+  .btn-secondary{
+      background-color: indigo;
+  }
+
+  
+
+  .footer {
+    position: relative;
+left: 0;
+bottom: 0;
+width: 100%;
+}

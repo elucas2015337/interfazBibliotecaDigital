@@ -28,9 +28,20 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.scss",
+              "src/dataTable/dataTables.bootstrap4.min.css",
+              "src/dataTable/fixedHeader.dataTable.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/@popperjs/core/dist/umd/popper.min.js",
+              "src/app/script.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/dataTable/jquery-3.3.1.min.js",
+              "src/dataTable/jquery.dataTables.min.js",
+              "src/dataTable/dataTables.bootstrap4.min.js"
+                          ]
           },
           "configurations": {
             "production": {
@@ -94,7 +105,8 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           }
         },
         "lint": {
@@ -123,6 +135,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "libraryInterface"
+    }
+  },
+  "defaultProject": "libraryInterface",
+  "cli": {
+    "analytics": "15df88d4-0f18-4f6e-b7df-7b58a8a2b67c"
+  }
 }

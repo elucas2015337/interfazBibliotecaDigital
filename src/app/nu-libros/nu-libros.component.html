@@ -1,0 +1,126 @@
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class = "barraDeIconos" >
+    <a class="active" href="/nuLibros"><i class="fa fa-book"></i></a>
+    <a href="/nuRevistas"><i class="fa fa-newspaper-o"></i></a>
+  </div>
+
+  
+
+  <div class="container mb-3 mt-3">
+    <div class="alert alert-primary" role="alert">
+        Libros Prestados
+      </div>
+    <table id="librosPrestados" class="table table-bordered table-striped" style="width:100%">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Autor</th>
+          <th>Título</th>
+          <th>Descripción</th>
+          <th>Temas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="customtr" data-toggle="modal" data-target="#giveBackConfirm">
+          <td>1</td>
+          <td>Miguel de Cervantes</td>
+          <td>Don Quijote de la mancha</td>
+          <td>Publicada su primera parte con el título de El ingenioso hidalgo don Quijote de la Mancha a comienzos de 1605, es la obra más destacada de la literatura española y una de las principales de la literatura universal.</td>
+          <td>Parodia, Sátira, Farsa, Ficción histórica, Ficción humorística, Novela psicológica, Novela biográfica</td>
+         
+          
+        </tr>
+        <tr id="customtr" data-toggle="modal" data-target="#giveBackConfirm">
+          <td>2</td>
+          <td>Charles Dickens</td>
+          <td>Historia de dos ciudades</td>
+          <td>La historia se desarrolla en dos países: Inglaterra y Francia, y en las ciudades de Londres y París, respectivamente en la época de los albores de la Revolución francesa.</td>
+          <td>Novela, Ficción histórica, Crítica social, Novela histórica</td>
+          
+        </tr>
+        <tr id="customtr" data-toggle="modal" data-target="#giveBackConfirm">
+          <td>3</td>
+          <td>J. R. R. Tolkien </td>
+          <td>El señor de los anillos</td>
+          <td>Su historia se desarrolla en la Tercera Edad del Sol de la Tierra Media, un lugar ficticio poblado por hombres y otras razas antropomorfas como los hobbits, los elfos o los enanos, así como por muchas otras criaturas reales y fantásticas.</td>
+          <td>Novela, Poesía, Alta fantasía, Literatura fantástica, Romance de caballería, Ficción de aventuras, Fantasía heroica</td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="container mb-3 mt-3">
+    <div class="alert alert-primary" role="alert">
+        Libros Disponibles para prestar
+      </div>
+    <table id="librosParaPrestar" class="table table-bordered table-striped" style="width:100%">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Autor</th>
+          <th>Título</th>
+          <th>Descripción</th>
+          <th>Temas</th>
+          <th>Disponibles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="customtr" data-toggle="modal" data-target="#lendConfirm">
+          <td>1</td>
+          <td>Antoine de Saint-Exupéry</td>
+          <td>El principito</td>
+          <td>El principito es un cuento poético que viene acompañado de ilustraciones hechas con acuarelas por el mismo Saint-Exupéry.</td>
+          <td>Literatura infantil, Fábula, Novela corta, Alegoría, Ficción especulativa, Literatura fantástica, Ficción didáctica</td>
+          <td>10</td>
+        </tr>
+        <tr id="customtr" data-toggle="modal" data-target="#lendConfirm">
+          <td>2</td>
+          <td>J. R. R. Tolkien</td>
+          <td>El hobbit</td>
+          <td>Es la primera obra que explora el universo mitológico creado por Tolkien y que más tarde se encargarían de definir El Señor de los Anillos y El Silmarillion. Dentro de dicha ficción, el argumento de El hobbit se sitúa en el año 2941 de la Tercera Edad del Sol, y narra la historia del hobbit Bilbo Bolsón, que junto con el mago Gandalf y un grupo de enanos, vive una aventura en busca del tesoro custodiado por el dragón Smaug en la Montaña Solitaria.</td>
+          <td>Novela, Literatura infantil, Épico, Literatura fantástica, Alta fantasía</td>
+          <td>36</td>
+        </tr>
+        <tr id="customtr" data-toggle="modal" data-target="#lendConfirm">
+          <td>3</td>
+          <td>Cao Xueqin</td>
+          <td>Sueño en el pabellón rojo</td>
+          <td>Es una obra escrita a mediados del siglo XVIII por Cao Xueqin (en chino: 曹雪芹) durante el reinado de la Dinastía Qing. Es considerada una de las obras maestras de la literatura de China y es una de las cuatro novelas clásicas chinas, y es generalmente reconocida como la cúspide de la narrativa china.</td>
+          <td>Novela, Ficción, Saga familiar</td>
+          <td>5</td>
+        </tr>
+      </tbody>
+     
+    </table>
+  </div>
+
+  <div class="modal fade" id="lendConfirm" tabindex="-1" aria-labelledby="exampleModalSmLabel" aria-hidden="true" >
+    <div class="modal-dialog modal-sm" id= "modalDialog">
+      <div class="modal-content" id = "deleteConfirmColor" style="background-color: gray; color: white;">
+        <div class="modal-header">
+          <h5 class="modal-title h4" id="exampleModalSmLabel">¿Prestar este libro?</h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Confirmar</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="giveBackConfirm" tabindex="-1" aria-labelledby="exampleModalSmLabel" aria-hidden="true" >
+    <div class="modal-dialog modal-sm" id= "modalDialog">
+      <div class="modal-content" id = "deleteConfirmColor" style="background-color: gray; color: white;">
+        <div class="modal-header">
+          <h5 class="modal-title h4" id="exampleModalSmLabel">¿Pedir este libro?</h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Confirmar</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>

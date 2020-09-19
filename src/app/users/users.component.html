@@ -1,0 +1,923 @@
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class = "barraDeIconos" >
+    <a class="active" href="/users"><i class="fa fa-group"></i></a>
+    <a href="/libros"><i class="fa fa-book"></i></a>
+    <a href="/revistas"><i class="fa fa-newspaper-o"></i></a>
+  </div>
+  
+  <div class="container mb-3 mt-3">
+    <table id="example" class="table table-bordered table-striped" style="width:100%">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Carnet/CUI</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Rol</th>
+          <th>Contraseña</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="customtr" data-toggle="modal" data-target="#user1">
+          <td>1</td>
+          <td>2015784</td>
+          <td>Javier Andres</td>
+          <td>Lopez Guarzo</td>
+          <td>Estudiante</td>
+          <td>HT34aff</td>
+          
+        </tr>
+        <tr id="customtr" data-toggle="modal" data-target="#user2">
+          <td>2</td>
+          <td>2222414120202</td>
+          <td>Adolfo Gerardo</td>
+          <td>Garcia Gonzales</td>
+          <td>Catedratico</td>
+          <td>GtFAssxx</td>
+        </tr>
+        <tr id="customtr" data-toggle="modal" data-target="#user3">
+          <td>3</td>
+          <td>2018665</td>
+          <td>Sergio Manuel</td>
+          <td>Flores del Cid</td>
+          <td>Estudiante</td>
+          <td>dsds44d</td>
+        </tr>
+        <tr id="customtr" data-toggle="modal" data-target="#user4">
+          <td>4</td>
+          <td>200036361515</td>
+          <td>Esaú Alexander</td>
+          <td>Dominguez Velazquez</td>
+          <td>Catedratico</td>
+          <td>rtttr5A</td>
+        </tr>
+        <tr id="customtr" data-toggle="modal" data-target="#user5">
+          <td>5</td>
+          <td>2017554</td>
+          <td>Junior Alberto</td>
+          <td>Chajon Hernandez</td>
+          <td>Estudiante</td>
+          <td>Hh46tyyss</td>
+        </tr>
+        <tr id="customtr" data-toggle="modal" data-target="#user6">
+          <td>6</td>
+          <td>887799665544</td>
+          <td>Jaime Daniel</td>
+          <td>Bautista Batres</td>
+          <td>Catedratico</td>
+          <td>JhsRtsd4</td>
+        </tr>
+        <tr id="customtr" data-toggle="modal" data-target="#user7">
+          <td>7</td>
+          <td>2016444</td>
+          <td>Henry Herwin</td>
+          <td>Romero Romero</td>
+          <td>Estudiante</td>
+          <td>KjHhds32</td>
+        </tr>
+        <tr id="customtr" data-toggle="modal" data-target="#user8">
+          <td>8</td>
+          <td>544455556666</td>
+          <td>Carlos Fernando</td>
+          <td>Paz García</td>
+          <td>Catedrático</td>
+          <td>LLkkjs8</td>
+        </tr>
+        <tr id="customtr" data-toggle="modal" data-target="#user9">
+          <td>9</td>
+          <td>2015446</td>
+          <td>Fabio Gabriel</td>
+          <td>Velázquez Álvarez</td>
+          <td>Estudiante</td>
+          <td>jjssg4322</td>
+        </tr>
+        <tr id="customtr" data-toggle="modal" data-target="#user10">
+          <td>10</td>
+          <td>112244778899</td>
+          <td>Ismael Isis</td>
+          <td>Boc Ochoa</td>
+          <td>Catedratica</td>
+          <td>KjSl88</td>
+        </tr>
+        <tr id="customtr" data-toggle="modal" data-target="#user11">
+          <td>11</td>
+          <td>2014221</td>
+          <td>Ángel Raúl</td>
+          <td>Herrera Arévalo</td>
+          <td>Estudiante</td>
+          <td>Hh34tAz9</td>
+        </tr>
+        <tr id="customtr">
+          <td>12</td>
+          <td>1</td>
+          <td>Admin</td>
+          <td>Admin</td>
+          <td>Admin</td>
+          <td>admin</td>
+        </tr>
+        <tr id="customtr" data-toggle="modal" data-target="#user13">
+          <td>13</td>
+          <td>668822468133</td>
+          <td>Marvin Alexander</td>
+          <td>Figueroa</td>
+          <td>Catedratico</td>
+          <td>Lo87Ass2</td>
+        </tr>
+        <tr id="customtr" data-toggle="modal" data-target="#user14">
+          <td>14</td>
+          <td>2019412</td>
+          <td>Nestor Alejandro</td>
+          <td>Torre Alvarado</td>
+          <td>Estudiante</td>
+          <td>00As43x1</td>
+        </tr>
+        <tr id="customtr" data-toggle="modal" data-target="#user15">
+          <td>15</td>
+          <td>2939494912</td>
+          <td>Mario Ricardo</td>
+          <td>Vazquez Echeverria</td>
+          <td>Catedratico</td>
+          <td>Ht4lk5A</td>
+        </tr>
+      </tbody>
+     
+    </table>
+  </div>
+
+
+  <div class="modal fade" id="deleteConfirm" tabindex="-1" aria-labelledby="exampleModalSmLabel" aria-hidden="true" >
+    <div class="modal-dialog modal-sm" id= "modalDialog">
+      <div class="modal-content" id = "deleteConfirmColor">
+        <div class="modal-header">
+          <h5 class="modal-title h4" id="exampleModalSmLabel">¿Eliminar al usuario?</h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Confirmar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade"  id="addNewUser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Agregar Usuario</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputUser" class="sr-only">name</label>
+              <input type="name" class="form-control" placeholder="Nombres" required autofocus>
+            </div>
+            <div class="form-group">
+              <label for="inputLastName" class="sr-only">lastName</label>
+              <input type="last-name" class="form-control" placeholder="Apellidos" required>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="sr-only">email</label>
+              <input type="email" class="form-control" placeholder="Correo" required>
+            </div>
+            <div class="form-group">
+              <label for="inputID" class="sr-only">carnetCUI</label>
+              <input type="id" class="form-control" placeholder="Carnet/CUI" required>
+            </div>
+            <div class="form-group">
+              <label for="user" class="sr-only">carnetCUI</label>
+              <input type="user" class="form-control" placeholder="usuario" required>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio1">Catedrático</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio2">Estudiante</label>
+            </div>
+           
+            
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Agregar</button>
+            </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+<!-- _-------------------------------------------------------------------------------------- -->
+
+  <div class="modal fade"  id="user1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Javier Lopez</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputUser" class="sr-only">name</label>
+              <input type="name" class="form-control" placeholder="Nombres" value="Javier Andres" required autofocus>
+            </div>
+            <div class="form-group">
+              <label for="inputLastName" class="sr-only">lastName</label>
+              <input type="last-name" class="form-control" placeholder="Apellidos" value="Lopez Guarzo" required>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="sr-only">email</label>
+              <input type="email" class="form-control" placeholder="Correo" value="useremail1@gmail.com" required>
+            </div>
+            <div class="form-group">
+              <label for="inputID" class="sr-only">carnetCUI</label>
+              <input type="id" class="form-control" placeholder="Carnet/CUI" value="2015784" required>
+            </div>
+            <div class="form-group">
+              <label for="user" class="sr-only">user</label>
+              <input type="user" class="form-control" placeholder="usuario" value="user1" required>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio1">Catedrático</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" checked>
+              <label class="custom-control-label" for="customRadio2">Estudiante</label>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade"  id="user2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Adolfo Garcia</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputUser" class="sr-only">name</label>
+              <input type="name" class="form-control" placeholder="Nombres" value="Adolfo Gerardo" required autofocus>
+            </div>
+            <div class="form-group">
+              <label for="inputLastName" class="sr-only">lastName</label>
+              <input type="last-name" class="form-control" placeholder="Apellidos" value="Garcia Gonzales" required>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="sr-only">email</label>
+              <input type="email" class="form-control" placeholder="Correo" value="useremail2@gmail.com" required>
+            </div>
+            <div class="form-group">
+              <label for="inputID" class="sr-only">carnetCUI</label>
+              <input type="id" class="form-control" placeholder="Carnet/CUI" value="2222414120202" required>
+            </div>
+            <div class="form-group">
+              <label for="user" class="sr-only">user</label>
+              <input type="user" class="form-control" placeholder="usuario" value="user2" required>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+              <label class="custom-control-label" for="customRadio1">Catedrático</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio2">Estudiante</label>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade"  id="user3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sergio Flores</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputUser" class="sr-only">name</label>
+              <input type="name" class="form-control" placeholder="Nombres" value="Sergio Manuel" required autofocus>
+            </div>
+            <div class="form-group">
+              <label for="inputLastName" class="sr-only">lastName</label>
+              <input type="last-name" class="form-control" placeholder="Apellidos" value="Flores del Cid" required>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="sr-only">email</label>
+              <input type="email" class="form-control" placeholder="Correo" value="useremail3@gmail.com" required>
+            </div>
+            <div class="form-group">
+              <label for="inputID" class="sr-only">carnetCUI</label>
+              <input type="id" class="form-control" placeholder="Carnet/CUI" value="2018665" required>
+            </div>
+            <div class="form-group">
+              <label for="user" class="sr-only">user</label>
+              <input type="user" class="form-control" placeholder="usuario" value="user3" required>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio1">Catedrático</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" checked>
+              <label class="custom-control-label" for="customRadio2">Estudiante</label>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade"  id="user4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Esaú Dominguez</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputUser" class="sr-only">name</label>
+              <input type="name" class="form-control" placeholder="Nombres" value="Esaú Alexander" required autofocus>
+            </div>
+            <div class="form-group">
+              <label for="inputLastName" class="sr-only">lastName</label>
+              <input type="last-name" class="form-control" placeholder="Apellidos" value="Dominguez Velazquez" required>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="sr-only">email</label>
+              <input type="email" class="form-control" placeholder="Correo" value="useremail4@gmail.com" required>
+            </div>
+            <div class="form-group">
+              <label for="inputID" class="sr-only">carnetCUI</label>
+              <input type="id" class="form-control" placeholder="Carnet/CUI" value="200036361515" required>
+            </div>
+            <div class="form-group">
+              <label for="user" class="sr-only">user</label>
+              <input type="user" class="form-control" placeholder="usuario" value="user4" required>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+              <label class="custom-control-label" for="customRadio1">Catedrático</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio2">Estudiante</label>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade"  id="user5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Junior Chajon</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputUser" class="sr-only">name</label>
+              <input type="name" class="form-control" placeholder="Nombres" value="Junior Alberto" required autofocus>
+            </div>
+            <div class="form-group">
+              <label for="inputLastName" class="sr-only">lastName</label>
+              <input type="last-name" class="form-control" placeholder="Apellidos" value="Chajon Hernandez" required>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="sr-only">email</label>
+              <input type="email" class="form-control" placeholder="Correo" value="useremail5@gmail.com" required>
+            </div>
+            <div class="form-group">
+              <label for="inputID" class="sr-only">carnetCUI</label>
+              <input type="id" class="form-control" placeholder="Carnet/CUI" value="2017554" required>
+            </div>
+            <div class="form-group">
+              <label for="user" class="sr-only">user</label>
+              <input type="user" class="form-control" placeholder="usuario" value="user5" required>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio1">Catedrático</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" checked>
+              <label class="custom-control-label" for="customRadio2">Estudiante</label>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade"  id="user6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Jaime Bautista</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputUser" class="sr-only">name</label>
+              <input type="name" class="form-control" placeholder="Nombres" value="Jaime Daniel" required autofocus>
+            </div>
+            <div class="form-group">
+              <label for="inputLastName" class="sr-only">lastName</label>
+              <input type="last-name" class="form-control" placeholder="Apellidos" value="Bautista Batres" required>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="sr-only">email</label>
+              <input type="email" class="form-control" placeholder="Correo" value="useremail6@gmail.com" required>
+            </div>
+            <div class="form-group">
+              <label for="inputID" class="sr-only">carnetCUI</label>
+              <input type="id" class="form-control" placeholder="Carnet/CUI" value="887799665544" required>
+            </div>
+            <div class="form-group">
+              <label for="user" class="sr-only">user</label>
+              <input type="user" class="form-control" placeholder="usuario" value="user6" required>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+              <label class="custom-control-label" for="customRadio1">Catedrático</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio2">Estudiante</label>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade"  id="user7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Henry Romero</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputUser" class="sr-only">name</label>
+              <input type="name" class="form-control" placeholder="Nombres" value="Henry Herwin" required autofocus>
+            </div>
+            <div class="form-group">
+              <label for="inputLastName" class="sr-only">lastName</label>
+              <input type="last-name" class="form-control" placeholder="Apellidos" value="Romero Romero" required>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="sr-only">email</label>
+              <input type="email" class="form-control" placeholder="Correo" value="useremail7@gmail.com" required>
+            </div>
+            <div class="form-group">
+              <label for="inputID" class="sr-only">carnetCUI</label>
+              <input type="id" class="form-control" placeholder="Carnet/CUI" value="2016444" required>
+            </div>
+            <div class="form-group">
+              <label for="user" class="sr-only">user</label>
+              <input type="user" class="form-control" placeholder="usuario" value="user7" required>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio1">Catedrático</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" checked>
+              <label class="custom-control-label" for="customRadio2">Estudiante</label>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade"  id="user8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Carlos Paz</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputUser" class="sr-only">name</label>
+              <input type="name" class="form-control" placeholder="Nombres" value="Carlos Fernando" required autofocus>
+            </div>
+            <div class="form-group">
+              <label for="inputLastName" class="sr-only">lastName</label>
+              <input type="last-name" class="form-control" placeholder="Apellidos" value="Paz García" required>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="sr-only">email</label>
+              <input type="email" class="form-control" placeholder="Correo" value="useremail8@gmail.com" required>
+            </div>
+            <div class="form-group">
+              <label for="inputID" class="sr-only">carnetCUI</label>
+              <input type="id" class="form-control" placeholder="Carnet/CUI" value="544455556666" required>
+            </div>
+            <div class="form-group">
+              <label for="user" class="sr-only">user</label>
+              <input type="user" class="form-control" placeholder="usuario" value="user8" required>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+              <label class="custom-control-label" for="customRadio1">Catedrático</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio2">Estudiante</label>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade"  id="user9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Favio Velázquez</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputUser" class="sr-only">name</label>
+              <input type="name" class="form-control" placeholder="Nombres" value="Fabio Gabriel" required autofocus>
+            </div>
+            <div class="form-group">
+              <label for="inputLastName" class="sr-only">lastName</label>
+              <input type="last-name" class="form-control" placeholder="Apellidos" value="Velázquez Álvarez" required>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="sr-only">email</label>
+              <input type="email" class="form-control" placeholder="Correo" value="useremail9@gmail.com" required>
+            </div>
+            <div class="form-group">
+              <label for="inputID" class="sr-only">carnetCUI</label>
+              <input type="id" class="form-control" placeholder="Carnet/CUI" value="2015446" required>
+            </div>
+            <div class="form-group">
+              <label for="user" class="sr-only">user</label>
+              <input type="user" class="form-control" placeholder="usuario" value="user9" required>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio1">Catedrático</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" checked>
+              <label class="custom-control-label" for="customRadio2">Estudiante</label>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade"  id="user10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ismael Boc</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputUser" class="sr-only">name</label>
+              <input type="name" class="form-control" placeholder="Nombres" value="Ismael Isis" required autofocus>
+            </div>
+            <div class="form-group">
+              <label for="inputLastName" class="sr-only">lastName</label>
+              <input type="last-name" class="form-control" placeholder="Apellidos" value="Boc Ochoa" required>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="sr-only">email</label>
+              <input type="email" class="form-control" placeholder="Correo" value="useremail10@gmail.com" required>
+            </div>
+            <div class="form-group">
+              <label for="inputID" class="sr-only">carnetCUI</label>
+              <input type="id" class="form-control" placeholder="Carnet/CUI" value="112244778899" required>
+            </div>
+            <div class="form-group">
+              <label for="user" class="sr-only">user</label>
+              <input type="user" class="form-control" placeholder="usuario" value="user10" required>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+              <label class="custom-control-label" for="customRadio1">Catedrático</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio2">Estudiante</label>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade"  id="user11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ángel Herrera</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputUser" class="sr-only">name</label>
+              <input type="name" class="form-control" placeholder="Nombres" value="Ángel Raúl" required autofocus>
+            </div>
+            <div class="form-group">
+              <label for="inputLastName" class="sr-only">lastName</label>
+              <input type="last-name" class="form-control" placeholder="Apellidos" value="Herrera Arévalo" required>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="sr-only">email</label>
+              <input type="email" class="form-control" placeholder="Correo" value="useremail11@gmail.com" required>
+            </div>
+            <div class="form-group">
+              <label for="inputID" class="sr-only">carnetCUI</label>
+              <input type="id" class="form-control" placeholder="Carnet/CUI" value="2014221" required>
+            </div>
+            <div class="form-group">
+              <label for="user" class="sr-only">user</label>
+              <input type="user" class="form-control" placeholder="usuario" value="user11" required>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio1">Catedrático</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" checked>
+              <label class="custom-control-label" for="customRadio2">Estudiante</label>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade"  id="user13" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Marvin Figueroa</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputUser" class="sr-only">name</label>
+              <input type="name" class="form-control" placeholder="Nombres" value="Marvin Alexander" required autofocus>
+            </div>
+            <div class="form-group">
+              <label for="inputLastName" class="sr-only">lastName</label>
+              <input type="last-name" class="form-control" placeholder="Apellidos" value="Figueroa" required>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="sr-only">email</label>
+              <input type="email" class="form-control" placeholder="Correo" value="useremail13@gmail.com" required>
+            </div>
+            <div class="form-group">
+              <label for="inputID" class="sr-only">carnetCUI</label>
+              <input type="id" class="form-control" placeholder="Carnet/CUI" value="668822468133" required>
+            </div>
+            <div class="form-group">
+              <label for="user" class="sr-only">user</label>
+              <input type="user" class="form-control" placeholder="usuario" value="user13" required>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+              <label class="custom-control-label" for="customRadio1">Catedrático</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio2">Estudiante</label>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade"  id="user14" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Nestor Torre</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputUser" class="sr-only">name</label>
+              <input type="name" class="form-control" placeholder="Nombres" value="Nestor Alejandro" required autofocus>
+            </div>
+            <div class="form-group">
+              <label for="inputLastName" class="sr-only">lastName</label>
+              <input type="last-name" class="form-control" placeholder="Apellidos" value="Torre Alvarado" required>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="sr-only">email</label>
+              <input type="email" class="form-control" placeholder="Correo" value="useremail14@gmail.com" required>
+            </div>
+            <div class="form-group">
+              <label for="inputID" class="sr-only">carnetCUI</label>
+              <input type="id" class="form-control" placeholder="Carnet/CUI" value="2019412" required>
+            </div>
+            <div class="form-group">
+              <label for="user" class="sr-only">user</label>
+              <input type="user" class="form-control" placeholder="usuario" value="user14" required>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio1">Catedrático</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" checked>
+              <label class="custom-control-label" for="customRadio2">Estudiante</label>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade"  id="user15" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Mario Vazquez</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputUser" class="sr-only">name</label>
+              <input type="name" class="form-control" placeholder="Nombres" value="Mario Ricardo" required autofocus>
+            </div>
+            <div class="form-group">
+              <label for="inputLastName" class="sr-only">lastName</label>
+              <input type="last-name" class="form-control" placeholder="Apellidos" value="Vazquez Echeverria" required>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="sr-only">email</label>
+              <input type="email" class="form-control" placeholder="Correo" value="useremail15@gmail.com" required>
+            </div>
+            <div class="form-group">
+              <label for="inputID" class="sr-only">carnetCUI</label>
+              <input type="id" class="form-control" placeholder="Carnet/CUI" value="2939494912" required>
+            </div>
+            <div class="form-group">
+              <label for="user" class="sr-only">user</label>
+              <input type="user" class="form-control" placeholder="usuario" value="user15" required>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+              <label class="custom-control-label" for="customRadio1">Catedrático</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio2">Estudiante</label>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#deleteConfirm">Eliminar</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Actualizar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+           
+  <button id="plusButton" class="btn" data-toggle="modal" data-target="#addNewUser"><i class="fa fa-plus-square"></i></button>
+  
+    
+  
